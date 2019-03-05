@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    listData:{},
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -16,14 +17,18 @@ Page({
     })
   },
   onLoad: function () {
+    const _this = this;
     wx.request({
-      url: 'https://www.easy-mock.com/mock/5c7df07ac05ec81060cf5443/test/getAllExample', //仅为示例，并非真实的接口地址
+      url: 'https://www.easy-mock.com/mock/5c7df07ac05ec81060cf5443/test/goodsList', //仅为示例，并非真实的接口地址
       data: {},
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
         console.log(res.data)
+        _this.setData({
+          listData: res.data.data
+        })
       }
     });
     if (app.globalData.userInfo) {

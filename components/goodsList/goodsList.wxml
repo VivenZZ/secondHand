@@ -1,0 +1,24 @@
+<!-- components/goodsList/goodsList.wxml -->
+<view class="goodsList-item" wx:for="{{listData}}" wx:key="index">
+  <view class="goodsList-item-imageBox" style="background-image: url({{item.image}})"  hover-class="none" hover-stop-propagation="false">
+  </view>
+  <view class="goodsList-item-info">
+    <view class="goodsList-item-info-titleBox" hover-class="none" hover-stop-propagation="false">
+      <text class="goodsList-item-info-title" selectable="false" space="false" decode="false">
+        {{item.title}}
+      </text>
+      <view class="goodsList-item-info-person" hover-class="none" hover-stop-propagation="false">
+        <view class="goodsList-item-info-picBox" style="background-image: url({{item.picture}})"  hover-class="none" hover-stop-propagation="false">
+        </view>
+        <text class="goodsList-item-info-name">{{item.name}}</text>
+      </view>
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      <text class="" selectable="false" space="false" decode="false">{{item.string}}</text>
+      <view class="" hover-class="none" hover-stop-propagation="false">
+        <text class="">{{item.city}}</text>
+        <text class="">{{item.date}}</text>
+      </view>
+    </view>
+  </view>
+</view>

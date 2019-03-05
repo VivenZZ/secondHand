@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/message/message",
-    "pages/release/release"
+    "pages/release/release",
+    "components/goodsList/goodsList"
   ],
   "window": {
     "backgroundTextStyle": "light",
