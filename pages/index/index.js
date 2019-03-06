@@ -3,6 +3,7 @@
 const app = getApp()
 
 Page({
+  
   data: {
     listData:{},
     motto: 'Hello World',
@@ -16,10 +17,14 @@ Page({
       url: '../logs/logs'
     })
   },
+  onPullDownRefresh() {
+    wx.stopPullDownRefresh();
+    console.log('修改数据')
+  },
   onLoad: function () {
     const _this = this;
     wx.request({
-      url: 'https://www.easy-mock.com/mock/5c7df07ac05ec81060cf5443/test/goodsList', //仅为示例，并非真实的接口地址
+      url: 'https://www.easy-mock.com/mock/5c7df07ac05ec81060cf5443/test/goodsList', //easymock模拟数据
       data: {},
       header: {
         'content-type': 'application/json' // 默认值
@@ -65,5 +70,5 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
 })

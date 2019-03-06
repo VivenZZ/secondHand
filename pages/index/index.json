@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "goods-list": "../../components/goodsList/goodsList"
+    "goods-list": "../../components/goodsList/goodsList",
+    "search-input": "../../components/searchInput/searchInput"
   }
 }

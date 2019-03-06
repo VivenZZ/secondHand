@@ -1,0 +1,11 @@
+<!--components/searchInput/searchInput.wxml-->
+
+<view class="searchInput-form" hover-class="none" hover-stop-propagation="false">
+  <view class="searchInput-section">
+    <image class="searchInput-searchImage" src="../../static/images/icon/index-current.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <input class="section-input" name="input" value='{{inputValue}}' type="text" placeholder="please input here" bindinput="listenerInput"/>
+  </view>
+  <view bindtap="skip" class="searchInput-button" hover-class="none" hover-stop-propagation="false">
+    搜索
+  </view>
+</view>
