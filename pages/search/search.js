@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const data = options.searchName // 接收参数
+    let data = options.searchName // 接收参数
     console.log(data)
   },
 

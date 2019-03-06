@@ -1,7 +1,8 @@
 //index.js
 //获取应用实例
-const app = getApp()
-
+let app = getApp()
+// 获取wx.request封装
+const req = require('../../utils/request.js')
 Page({
   
   data: {
@@ -22,20 +23,15 @@ Page({
     console.log('修改数据')
   },
   onLoad: function () {
-    const _this = this;
-    wx.request({
-      url: 'https://www.easy-mock.com/mock/5c7df07ac05ec81060cf5443/test/goodsList', //easymock模拟数据
-      data: {},
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        console.log(res.data)
-        _this.setData({
-          listData: res.data.data
-        })
-      }
-    });
+    let _this = this;
+    req.get('goodsList', {}).then(res => {
+      console.log(res)
+      _this.setData({
+        listData: res.data.data
+      })
+    }).catch(e => {
+      console.log(e)
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
