@@ -1,10 +1,19 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 20rpx; */
-  box-sizing: border-box;
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
 } 
+.ovh{
+  overflow: hidden;
+}
+.mt28{
+  margin-top: 28rpx;
+}
+.bordert{
+  border-top: 1rpx solid silver;
+}
+.borderb{
+  border-bottom: 1rpx solid silver;
+}

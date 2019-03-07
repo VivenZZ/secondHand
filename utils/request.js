@@ -13,6 +13,9 @@ class Request{
   }
   request (method, url, data) {
     const vm = this
+    wx.showLoading({
+      title: '加载中',
+    })
     return new Promise( (resolve, reject) =>{
       wx.request({
         url: vm.baseUrl + url,
@@ -20,6 +23,7 @@ class Request{
         method,
         success (res) {
           resolve(res)
+          wx.hideLoading()
         },
         fail () {
           reject({
@@ -28,6 +32,7 @@ class Request{
             method,
             data
           })
+          wx.hideLoading()
         }
       })
     })

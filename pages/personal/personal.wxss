@@ -1,0 +1,28 @@
+.mine {
+  flex-direction: column;
+}
+.mine .mine-log {
+  width: 100rpx;
+  height: 100rpx;
+}
+.personal-data {
+  display: flex;
+  text-align: center;
+  border-top: 1rpx solid silver;
+  border-bottom: 1rpx solid silver;
+}
+.personal-data .personal-data-item {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 56rpx;
+}
+.mine-list {
+  display: flex;
+  border-bottom: 1rpx solid silver;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  padding: 28rpx;
+}
+.mine-list .mine-list-title {
+  flex: 1;
+}

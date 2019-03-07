@@ -1,0 +1,67 @@
+<!--logs.wxml-->
+<view class="mine ovh container">
+  <view  class="mine-log fl"  hover-class="none" hover-stop-propagation="false">
+    <open-data type="userAvatarUrl"></open-data>  
+  </view>
+  <view class="mine-name fl" hover-class="none" hover-stop-propagation="false">
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+</view>
+<view class="personal-data mt28" hover-class="none" hover-stop-propagation="false">
+  <view class="personal-data-item" hover-class="none" hover-stop-propagation="false">
+    <view class="" selectable="false" space="false" decode="false">
+      {{111}}
+    </view>
+    <view class="" selectable="false" space="false" decode="false">
+      钱包
+    </view>
+  </view>
+  <view class="personal-data-item" hover-class="none" hover-stop-propagation="false">
+    <view class="" selectable="false" space="false" decode="false">
+      {{111}}
+    </view>
+    <view class="" selectable="false" space="false" decode="false">
+      我的发布
+    </view>
+  </view>
+  <view class="personal-data-item" hover-class="none" hover-stop-propagation="false">
+    <view class="" selectable="false" space="false" decode="false">
+      {{111}}
+    </view>
+    <view class="" selectable="false" space="false" decode="false">
+      我的购买
+    </view>
+  </view> 
+</view>
+<view class="mine-list bordert mt28" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    我的卖出
+  </view>
+</view>
+<view class="mine-list" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    我的收藏
+  </view>
+</view>
+<view class="mine-list" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    热点问题
+  </view>
+</view>
+<view class="mine-list" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    我的地址
+  </view>
+</view>
+<view class="mine-list" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    投诉与建议
+  </view>
+</view>
+<view class="mine-list" hover-class="none" hover-stop-propagation="false">
+  <view class="mine-list-title" hover-class="none" hover-stop-propagation="false">
+    关于我们
+  </view>
+</view>
+  
+  

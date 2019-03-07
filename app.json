@@ -1,7 +1,7 @@
 {
   "pages": [
+    "pages/personal/personal",
     "pages/index/index",
-    "pages/logs/logs",
     "pages/message/message",
     "pages/release/release",
     "components/goodsList/goodsList",
@@ -38,7 +38,7 @@
         "text": "消息"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/personal/personal",
         "iconPath": "static/images/icon/mine.png",
         "selectedIconPath": "static/images/icon/mine-current.png",
         "text": "我的"
