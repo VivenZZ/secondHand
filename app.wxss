@@ -1,20 +1,14 @@
 @import "lib/css/weui.wxss";
 /**app.wxss**/
+page{
+  font-size: 'PingFang SC Light';
+}
 .fl{
   float: left;
 }
 .fr{
-  float: right;
+  float: right; 
 } 
 .ovh{
   overflow: hidden;
-}
-.mt28{
-  margin-top: 28rpx;
-}
-.bordert{
-  border-top: 1rpx solid silver;
-}
-.borderb{
-  border-bottom: 1rpx solid silver;
 }

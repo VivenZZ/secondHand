@@ -1,0 +1,44 @@
+/*
+* 文字主标题
+* @title-size 大小 
+* @title-weight 粗细
+* @title-color 颜色
+*/
+/*
+* 文字主小标题
+* @title-size 大小 
+* @title-weight 粗细
+* @title-color 颜色
+*/
+/*
+* 文字副标题
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 时间标签
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 最小文字
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 边框颜色
+*/
+/*
+* 常见边距大小
+*/
+/*
+* icon大小
+*/
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.right-icon {
+  width: 7px;
+  height: 12px;
+}

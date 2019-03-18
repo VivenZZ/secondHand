@@ -1,0 +1,10 @@
+<!--components/iconList/iconList.wxml-->
+<view class="iconList" hover-class="none" hover-stop-propagation="false">
+  <image class="image icon" src="{{iconListData.image}}" />
+  <picker class="picker" bindchange="_bindPickerChange" value="{{index}}" range="{{iconListData.array}}">
+    <view class="picker">
+      {{iconListData.text}}: <text>{{iconListData.array[index]}}</text>
+    </view>
+  </picker>
+  <image class="right-icon" src="{{iconListData.righticon}}" />
+</view>

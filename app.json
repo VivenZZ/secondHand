@@ -6,8 +6,7 @@
     "pages/message/message",
     "components/goodsList/goodsList",
     "components/searchInput/searchInput",
-    "pages/search/search",
-    "components/list/list"
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "dark",

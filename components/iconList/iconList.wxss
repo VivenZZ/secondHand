@@ -35,13 +35,28 @@
 * icon大小
 */
 .icon {
-  width: 30px;
+  width: 15px;
   height: 15px;
 }
-.container_box {
-  width: 100%;
-  display: block;
+.right-icon {
+  width: 7px;
+  height: 12px;
 }
-.goodsList-box {
-  width: 100%;
+.iconList {
+  margin-left: 40rpx;
+  padding-right: 20rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #F2F2F2;
+}
+.iconList .image {
+  margin-right: 20rpx;
+}
+.iconList .picker {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 400;
+  color: #545454;
 }
