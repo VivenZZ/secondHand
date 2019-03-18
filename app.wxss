@@ -1,3 +1,4 @@
+@import "lib/css/weui.wxss";
 /**app.wxss**/
 .fl{
   float: left;

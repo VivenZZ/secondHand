@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/release/release",
     "pages/personal/personal",
     "pages/index/index",
     "pages/message/message",
-    "pages/release/release",
     "components/goodsList/goodsList",
     "components/searchInput/searchInput",
-    "pages/search/search"
+    "pages/search/search",
+    "components/list/list"
   ],
   "window": {
     "backgroundTextStyle": "dark",

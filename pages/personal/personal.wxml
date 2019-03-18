@@ -9,7 +9,7 @@
 </view>
 <view class="personal-data mt28" hover-class="none" hover-stop-propagation="false">
   <view class="personal-data-item" hover-class="none" hover-stop-propagation="false">
-    <view class="" selectable="false" space="false" decode="false">
+    <view class="" selectable="false" space="false" decode="false" bindtap='showInfos'>
       {{111}}
     </view>
     <view class="" selectable="false" space="false" decode="false">
