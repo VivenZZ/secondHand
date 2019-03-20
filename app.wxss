@@ -2,6 +2,7 @@
 /**app.wxss**/
 page{
   font-size: 'PingFang SC Light';
+  background-color: #F5F8FA;
 }
 .fl{
   float: left;

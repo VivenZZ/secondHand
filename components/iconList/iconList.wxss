@@ -1,4 +1,7 @@
 /*
+* 常见边距大小
+*/
+/*
 * 文字主标题
 * @title-size 大小 
 * @title-weight 粗细
@@ -29,9 +32,6 @@
 * 边框颜色
 */
 /*
-* 常见边距大小
-*/
-/*
 * icon大小
 */
 .icon {
@@ -43,20 +43,23 @@
   height: 12px;
 }
 .iconList {
-  margin-left: 40rpx;
-  padding-right: 20rpx;
-  line-height: 100rpx;
-  height: 100rpx;
   display: flex;
-  align-items: center;
-  border-bottom: 1rpx solid #F2F2F2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #666666;
+  background-color: white;
+  border-radius: 20rpx;
 }
-.iconList .image {
-  margin-right: 20rpx;
+.iconList .item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40rpx 0;
 }
-.iconList .picker {
-  flex: 1;
-  font-size: 15px;
-  font-weight: 400;
-  color: #545454;
+.iconList .icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto 40rpx;
 }

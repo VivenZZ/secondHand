@@ -6,7 +6,59 @@ const req = require('../../utils/request.js')
 Page({
   
   data: {
-    listData:{},
+    iconListData: [
+      {
+        pic: '/static/images/icon/icon-01.png',
+        id: '1002',
+        text: '孕妈用品'
+      },
+      {
+        pic: '/static/images/icon/icon-02.png',
+        id: '1002',
+        text: '绘本玩具'
+      },
+      {
+        pic: '/static/images/icon/icon-03.png',
+        id: '1002',
+        text: '童车童床'
+      },
+      {
+        pic: '/static/images/icon/icon-04.png',
+        id: '1002',
+        text: '尿裤湿巾'
+      },
+      {
+        pic: '/static/images/icon/icon-05.png',
+        id: '1002',
+        text: '婴儿喂养'
+      },
+      {
+        pic: '/static/images/icon/icon-06.png',
+        id: '1002',
+        text: '婴儿服饰'
+      },
+      {
+        pic: '/static/images/icon/icon-07.png',
+        id: '1002',
+        text: '洗护用品'
+      },
+      {
+        pic: '/static/images/icon/icon-08.png',
+        id: '1002',
+        text: '婴儿防护'
+      },
+      {
+        pic: '/static/images/icon/icon-09.png',
+        id: '1002',
+        text: '背带凳枕'
+      },
+      {
+        pic: '/static/images/icon/icon-10.png',
+        id: '1002',
+        text: '其他'
+      }
+    ],
+    listData: [],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -24,14 +76,14 @@ Page({
   },
   onLoad: function () {
     let _this = this;
-    req.get('goodsList', {}).then(res => {
-      console.log(res)
-      _this.setData({
-        listData: res.data.data
-      })
-    }).catch(e => {
-      console.log(e)
-    })
+    // req.get('goodsList', {}).then(res => {
+    //   console.log(res)
+    //   _this.setData({
+    //     listData: res.data.data
+    //   })
+    // }).catch(e => {
+    //   console.log(e)
+    // })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

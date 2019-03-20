@@ -1,1 +1,58 @@
-/* pages/release/release.wxss */
+/*
+* 常见边距大小
+*/
+/*
+* 文字主标题
+* @title-size 大小 
+* @title-weight 粗细
+* @title-color 颜色
+*/
+/*
+* 文字主小标题
+* @title-size 大小 
+* @title-weight 粗细
+* @title-color 颜色
+*/
+/*
+* 文字副标题
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 时间标签
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 最小文字
+* @title-size 大小 
+* @title-color 颜色
+*/
+/*
+* 边框颜色
+*/
+/*
+* icon大小
+*/
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.right-icon {
+  width: 7px;
+  height: 12px;
+}
+page {
+  background-color: white;
+}
+.btn {
+  padding: 0 40rpx;
+  margin: 200rpx 0 50rpx;
+}
+.btn button {
+  font-size: 15px;
+  border-radius: 100rpx;
+}
+.btn button[type=primary] {
+  background-color: #F2A2A8;
+}

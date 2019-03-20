@@ -1,13 +1,52 @@
 Page({
   data: {
+    submitData: {
+      primarySize: 'default',
+      warnSize: 'default',
+      disabled: false,
+      plain: false,
+      loading: false
+    },
     files: [],
     iconData: [
+      {
+        index: 0,
+        image: '/static/images/icon/order_back.png',
+        text: '标题',
+        righticon: '/static/images/icon/right.png',
+        array: [],
+        type: 'input'
+      },
       {
         index: 0,
         image: '/static/images/icon/order_back.png',
         text: '品牌',
         righticon: '/static/images/icon/right.png',
         array: ['美国', '中国', '巴西', '日本'],
+        type: 'picker'
+      },
+      {
+        index: 0,
+        image: '/static/images/icon/order_back.png',
+        text: '规格',
+        righticon: '/static/images/icon/right.png',
+        array: [],
+        type: 'input'
+      },
+      {
+        index: 0,
+        image: '/static/images/icon/order_back.png',
+        text: '性别',
+        righticon: '/static/images/icon/right.png',
+        array: ['通用', '男', '女'],
+        type: 'picker'
+      },
+      {
+        index: 0,
+        image: '/static/images/icon/order_back.png',
+        text: '新旧程度',
+        righticon: '/static/images/icon/right.png',
+        array: ['全新', '九成新', '八成新', '七成新', '六成新'],
         type: 'picker'
       },
       {
@@ -21,18 +60,18 @@ Page({
       {
         index: 0,
         image: '/static/images/icon/order_back.png',
-        text: '标题',
+        text: '配送方式',
         righticon: '/static/images/icon/right.png',
-        array: [],
-        type: 'input'
+        array: ['自提', '邮寄'],
+        type: 'picker'
       },
       {
         index: 0,
         image: '/static/images/icon/order_back.png',
-        text: '规格',
+        text: '自提地址',
         righticon: '/static/images/icon/right.png',
-        array: [],
-        type: 'input'
+        array: ['随便选', '随便挑'],
+        type: 'picker'
       }
     ]
   },
@@ -49,7 +88,7 @@ Page({
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
         });
-        console.log(that.data.files[0])
+        console.log(that.data.files)
       }
     })
   },
@@ -58,5 +97,16 @@ Page({
       current: e.currentTarget.id, // 当前显示图片的http链接
       urls: this.data.files // 需要预览的图片http链接列表
     })
-  }
+  },
+  setLoading(e) {
+    this.setData({
+      'submitData.loading': !this.data.submitData.loading
+    })
+    // 模拟请求
+    setTimeout(()=>{
+      this.setData({
+        'submitData.loading': !this.data.submitData.loading
+      })
+    },1000)
+  },
 })

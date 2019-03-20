@@ -1,7 +1,9 @@
 {
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#F5F8FA",
   "usingComponents": {
     "goods-list": "../../components/goodsList/goodsList",
-    "search-input": "../../components/searchInput/searchInput"
+    "search-input": "../../components/searchInput/searchInput",
+    "icon-list": "../../components/iconList/iconList"
   }
 }

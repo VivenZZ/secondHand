@@ -2,29 +2,32 @@
 @import "../../static/css/style.less";
 .searchInput-form{
   display: block;
-  width: 100vw;
-  padding: 20rpx;
-  background: @color;
+  padding: @20;
   display: flex;
   align-items: center;
+  font-size: @titleTime-size;
+  color: @titleTime-color;
   .searchInput-button{
     width: 100rpx;
     overflow: hidden;
+    margin-left: @20;
   }
   .searchInput-section{
     flex: 1;
     display: flex;
     align-items: center;
-    margin-left: 20rpx;
+    margin-left: @20;
     background-color: white;
     border-radius: 10rpx;
+    height: @60;
+    border-radius: @60;
+    border: 1rpx solid @border-color;
     .searchInput-searchImage{
       width: 50rpx;
       height: 50rpx;
     }
     .section-input{
       flex: 1;
-      height: 80rpx;
     }
   }
 }

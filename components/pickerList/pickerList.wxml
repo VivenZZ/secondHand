@@ -1,0 +1,12 @@
+<!--components/pickerList/pickerList.wxml-->
+<view class="pickerList" hover-class="none" hover-stop-propagation="false">
+  <image class="image icon" src="{{pickerListData.image}}" />
+  <picker wx:if="{{pickerListData.type === 'picker'}}" class="picker" bindchange="_bindPickerChange" value="{{index}}" range="{{pickerListData.array}}">
+    <view class="picker">{{pickerListData.text}}<text>{{pickerListData.array[index]}}</text></view>
+  </picker>
+  <view wx:elif="{{pickerListData.type === 'input'}}" class="inputbox" hover-class="none" hover-stop-propagation="false">
+    <text class="inputbox-text" selectable="false" space="false" decode="false">{{pickerListData.text}}</text>
+    <input class="inputbox-input" type="text" placeholder="请输入{{pickerListData.text}}"></input>
+  </view>
+  <image wx:if="{{pickerListData.type !== 'input'}}" class="right-icon" src="{{pickerListData.righticon}}" />
+</view>

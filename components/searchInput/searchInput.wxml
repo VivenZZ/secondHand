@@ -2,8 +2,8 @@
 
 <view class="searchInput-form" hover-class="none" hover-stop-propagation="false">
   <view class="searchInput-section">
-    <image class="searchInput-searchImage" src="../../static/images/icon/index-current.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
-    <input class="section-input" name="input" value='{{inputValue}}' type="text" placeholder="please input here" bindinput="listenerInput"/>
+    <image class="searchInput-searchImage" src="../../static/images/icon/search.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+    <input class="section-input" name="input" value='{{inputValue}}' type="text" placeholder="搜索想要的宝贝" bindinput="listenerInput"/>
   </view>
   <view bindtap="skip" class="searchInput-button" hover-class="none" hover-stop-propagation="false">
     搜索

@@ -1,4 +1,7 @@
 /*
+* 常见边距大小
+*/
+/*
 * 文字主标题
 * @title-size 大小 
 * @title-weight 粗细
@@ -29,14 +32,15 @@
 * 边框颜色
 */
 /*
-* 常见边距大小
-*/
-/*
 * icon大小
 */
 .icon {
-  width: 30px;
+  width: 15px;
   height: 15px;
+}
+.right-icon {
+  width: 7px;
+  height: 12px;
 }
 .container_box {
   width: 100%;
@@ -44,4 +48,8 @@
 }
 .goodsList-box {
   width: 100%;
+}
+.iconListContainer {
+  padding: 0 40rpx;
+  margin: 40rpx 0 60rpx;
 }

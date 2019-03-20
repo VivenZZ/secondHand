@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "发布",
   "usingComponents": {
-    "icon-list": "../../components/iconList/iconList"
+    "icon-list": "../../components/pickerList/pickerList"
   }
 }

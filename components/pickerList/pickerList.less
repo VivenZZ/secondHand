@@ -1,0 +1,37 @@
+@import "../../static/css/style.less";
+.pickerList{
+  margin-left: @40;
+  padding-right: @20;
+  line-height: @100;
+  height: @100;
+  display: flex;
+  align-items: center; 
+  border-bottom: 1rpx solid @border-color;
+  .image{ 
+    margin-right: @20; 
+  }
+  .picker{
+    flex: 1;
+    font-size: @title-size;
+    font-weight: @title-weight;
+    color: @title-color;
+    text{
+      margin-left: @20;
+      font-weight: @titleTime-weight;
+    }
+  }
+  .inputbox{
+    display: flex;
+    font-size: @title-size;
+    color: @title-color;
+  }
+  .inputbox-text{
+    margin-right: @20;
+    font-weight: @title-weight;
+  }
+  .inputbox-input{
+    max-width: 500rpx;
+    height: @100;
+  }
+
+}

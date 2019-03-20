@@ -2,7 +2,7 @@
 Component({
   properties: {
     listData: {
-      type: Object
+      type: Array
     }
   }
 })

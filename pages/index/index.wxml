@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <view class="container">
   <search-input></search-input>
+  <view class="iconListContainer" hover-class="none" hover-stop-propagation="false">
+    <icon-list iconListData="{{iconListData}}"></icon-list>
+  </view>
   <view class="container_box" hover-class="none" hover-stop-propagation="false">
     <goods-list class="goodsList-box" listData="{{listData}}"></goods-list>
   </view>

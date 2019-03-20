@@ -3,27 +3,34 @@
     <view class="weui-cell">
       <view class="weui-cell__bd">
         <view class="weui-uploader">
-          <view class="weui-uploader__hd">
-            <view class="weui-uploader__title">图片上传</view>
-            <view class="weui-uploader__info">{{files.length}}</view>
-          </view>
           <view class="weui-uploader__bd">
             <view class="weui-uploader__files" id="uploaderFiles">
               <block wx:for="{{files}}" wx:key="*this">
                 <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  <image style="border-radius:10rpx;" class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
                 </view>
               </block>
             </view>
-            <view class="weui-uploader__input-box">
-              <view class="weui-uploader__input" bindtap="chooseImage">111</view>
-            </view>
+            <image style="width:160rpx;height:160rpx;border-radius:10rpx;" bindtap="chooseImage" src="/static/images/icon/photo.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            </image>
           </view>
         </view>
       </view>
     </view>
   </view>
 </view>
-<block wx:for="{{iconData}}" wx:key="index">
-  <icon-list iconListData="{{item}}" bind:showTab="showTab"></icon-list>
+<block wx:for="{{iconData}}" wx:key="{{index}}">
+  <icon-list pickerListData="{{item}}" bind:showTab="showTab"></icon-list>
 </block>
+<view class="btn" hover-class="none" hover-stop-propagation="false">
+  <button
+    type="primary"
+    size="{{submitData.primarySize}}"
+    loading="{{submitData.loading}}"
+    plain="{{submitData.plain}}"
+    disabled="{{submitData.disabled}}"
+    bindtap="setLoading"
+  >
+    确认发布
+  </button>
+</view>
