@@ -20,7 +20,7 @@
   </view>
 </view>
 <block wx:for="{{iconData}}" wx:key="{{index}}">
-  <icon-list pickerListData="{{item}}" bind:showTab="showTab"></icon-list>
+  <picker-list pickerListData="{{item}}" bind:showTab="showTab"></picker-list>
 </block>
 <view class="btn" hover-class="none" hover-stop-propagation="false">
   <button

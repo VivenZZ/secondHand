@@ -1,0 +1,4 @@
+<!--components/tab/tab.wxml-->
+<view class="tab" hover-class="none" hover-stop-propagation="false">
+  <text class="{{currentIndex === index ? 'current': ''}}" wx:for="{{tabData}}" wx:key="{{index}}" data-index="{{index}}" selectable="false" space="false" decode="false" bindtap="changeIndex">{{item.text}}</text>
+</view>

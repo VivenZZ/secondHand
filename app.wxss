@@ -1,7 +1,7 @@
 @import "lib/css/weui.wxss";
 /**app.wxss**/
 page{
-  font-size: 'PingFang SC Light';
+  font-family : PingFang SC-Bold;
   background-color: #F5F8FA;
 }
 .fl{

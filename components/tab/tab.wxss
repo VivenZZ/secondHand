@@ -21,17 +21,15 @@
   width: 7px;
   height: 12px;
 }
-page {
-  background-color: white;
-}
-.btn {
-  padding: 0 40rpx;
-  margin: 200rpx 0 50rpx;
-}
-.btn button {
+.tab {
+  display: flex;
   font-size: 15px;
-  border-radius: 100rpx;
+  color: #999;
 }
-.btn button[type=primary] {
-  background-color: #F2A2A8;
+.tab text {
+  margin-right: 40rpx;
+}
+.tab .current {
+  color: #333;
+  font-weight: bold;
 }

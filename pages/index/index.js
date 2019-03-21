@@ -4,10 +4,26 @@ let app = getApp()
 // 获取wx.request封装
 const req = require('../../utils/request.js')
 Page({
-  
   data: {
-    iconListData: [
+    dialogData: {
+      msg: 'shabi?',
+      title: ''
+    },
+    tabData: [
       {
+        id: 0,
+        text: '附近闲置'
+      },
+      {
+        id: 1,
+        text: '最新闲置'
+      },
+      {
+        id: 2,
+        text: '最多浏览'
+      }
+    ],
+    iconListData: [{
         pic: '/static/images/icon/icon-01.png',
         id: '1002',
         text: '孕妈用品'
@@ -65,31 +81,35 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
   onPullDownRefresh() {
-    wx.stopPullDownRefresh();
-    console.log('修改数据')
+    req.get('goodsList', {}).then(res => {
+      this.setData({
+        listData: res.data.data
+      })
+      wx.stopPullDownRefresh();
+    }).catch(e => {
+      this.showDialog(e.msg)
+    })
   },
   onLoad: function () {
-    let _this = this;
-    // req.get('goodsList', {}).then(res => {
-    //   console.log(res)
-    //   _this.setData({
-    //     listData: res.data.data
-    //   })
-    // }).catch(e => {
-    //   console.log(e)
-    // })
+    req.get('goodsList', {}).then(res => {
+      this.setData({
+        listData: res.data.data
+      })
+    }).catch(e => {
+      this.showDialog(e.msg)
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -111,7 +131,7 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -119,4 +139,34 @@ Page({
       hasUserInfo: true
     })
   },
+  onReachBottom () {
+    req.get('goodsList', {}).then(res => {
+      this.setData({
+        listData: this.data.listData.concat(res.data.data)
+      })
+    }).catch(e => {
+      this.showDialog(e.msg)
+    })
+  },
+  showTab: function (e) {
+    console.log(e.detail);
+    req.get('goodsList', {}).then(res => {
+      this.setData({
+        listData: res.data.data
+      })
+    }).catch(e => {
+      this.showDialog(e.msg)
+    })
+  },
+  showDialog: function (msg) {
+    wx.showModal({
+      content: msg,
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    });
+  }
 })

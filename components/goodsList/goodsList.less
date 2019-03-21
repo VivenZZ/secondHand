@@ -1,43 +1,99 @@
 /* components/goodsList/goodsList.wxss */
+@import "../../static/css/style.less";
 .goodsList-item{
-  display: flex;
+  padding: @40 @40 0;
   margin-bottom: 20rpx;
-  border-bottom: 1rpx gainsboro solid;
-  .goodsList-goodsImage{
-    width: 300rpx;
-    height: 300rpx;
-  }
-  .goodsList-info{
-    flex: 1;
+  display: flex;
+  flex-direction: column; 
+  background-color: white;
+  .header{
     display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    .goodsList-title{
-      line-height: 40rpx;
+    flex-direction: row; 
+    justify-content: space-between;
+    .personal_info{
       display: flex;
-      .goodsList-releaseInfo{
+      align-items: center;
+    }
+    .personal_pic{
+      width: @100;
+      height: @100;
+      border-radius: @100;
+      margin-right: @40;
+    }
+    .personal_pic_r{
+      display: flex;
+      flex-direction: column;
+      .name{
+        font-size: @title-size-15;
+        color: @title-color-333;
+      }
+      .time{
+        font-size: @title-size-13;
+        color: @title-color-999;
+      }
+    }
+    .price{
+      font-size: @title-size-13;
+      color: @price-color;
+      text{
+        font-size: 18px;
+      }
+    }
+  }
+  .pic_box{
+    margin-top: @40;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    image{
+      // width: 210rpx;
+      // height: 210rpx;
+      width: 220rpx;
+      height: 220rpx;
+      border-radius: @20;
+    }
+  }
+  .content-title{
+    font-size: @title-size-13;
+    font-weight: @title-weight-b;
+    color: @title-color-333;
+    margin: @20 0 @10;
+  }
+  .content-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: @title-size-13;
+    font-weight: @title-weight-n;
+    color: @title-color-999;
+   }
+   .footer{
+     border-top: 1px solid @border-color;
+     margin-top: @40;
+     font-size: @title-size-13;
+     color: @title-color-999;
+     line-height: @80;
+     display: flex;
+     justify-content: space-between;
+     .address{
+       display: flex;
+       align-items: center;
+      image{
+        width: 21rpx;
+        height: 25rpx;
+        margin-right: @10;
+      }
+     }
+     .seeing{
         display: flex;
         align-items: center;
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-      }
-      .goodsList-text{
-        flex: 1;
-      }
-    }
-    .goodsList-content{
-      flex: 1;
-      line-height: 40rpx;
-      display: flex;
-      align-items: flex-end;
-      height: 200rpx;
-      .goodsList-releaseInfo{
-        display: flex;
-      }
-      .goodsList-text{
-        flex: 1;
-      }
-    }
-  }
+       image{
+        width: 25rpx;
+        height: 21rpx;
+        margin-right: @10; 
+       }
+     }
+   }
 }

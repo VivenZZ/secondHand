@@ -1,42 +1,119 @@
 /* components/goodsList/goodsList.wxss */
+/*
+* 常见边距大小
+*/
+/*
+* 常见字体颜色
+*/
+/*
+* 常见字体大小
+*/
+/*
+* 常见字体粗细
+*/
+/*
+* icon大小
+*/
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.right-icon {
+  width: 7px;
+  height: 12px;
+}
 .goodsList-item {
-  display: flex;
+  padding: 40rpx 40rpx 0;
   margin-bottom: 20rpx;
-  border-bottom: 1rpx gainsboro solid;
-}
-.goodsList-item .goodsList-goodsImage {
-  width: 300rpx;
-  height: 300rpx;
-}
-.goodsList-item .goodsList-info {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  background-color: white;
 }
-.goodsList-item .goodsList-info .goodsList-title {
-  line-height: 40rpx;
+.goodsList-item .header {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.goodsList-item .goodsList-info .goodsList-title .goodsList-releaseInfo {
+.goodsList-item .header .personal_info {
+  display: flex;
   align-items: center;
+}
+.goodsList-item .header .personal_pic {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  margin-right: 40rpx;
+}
+.goodsList-item .header .personal_pic_r {
   display: flex;
   flex-direction: column;
-  text-align: right;
 }
-.goodsList-item .goodsList-info .goodsList-title .goodsList-text {
-  flex: 1;
+.goodsList-item .header .personal_pic_r .name {
+  font-size: 15px;
+  color: #333;
 }
-.goodsList-item .goodsList-info .goodsList-content {
-  flex: 1;
-  line-height: 40rpx;
+.goodsList-item .header .personal_pic_r .time {
+  font-size: 13px;
+  color: #999;
+}
+.goodsList-item .header .price {
+  font-size: 13px;
+  color: #FE688E;
+}
+.goodsList-item .header .price text {
+  font-size: 18px;
+}
+.goodsList-item .pic_box {
+  margin-top: 40rpx;
   display: flex;
-  align-items: flex-end;
-  height: 200rpx;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.goodsList-item .goodsList-info .goodsList-content .goodsList-releaseInfo {
+.goodsList-item .pic_box image {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 20rpx;
+}
+.goodsList-item .content-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  margin: 20rpx 0 10rpx;
+}
+.goodsList-item .content-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+}
+.goodsList-item .footer {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 40rpx;
+  font-size: 13px;
+  color: #999;
+  line-height: 80rpx;
   display: flex;
+  justify-content: space-between;
 }
-.goodsList-item .goodsList-info .goodsList-content .goodsList-text {
-  flex: 1;
+.goodsList-item .footer .address {
+  display: flex;
+  align-items: center;
+}
+.goodsList-item .footer .address image {
+  width: 21rpx;
+  height: 25rpx;
+  margin-right: 10rpx;
+}
+.goodsList-item .footer .seeing {
+  display: flex;
+  align-items: center;
+}
+.goodsList-item .footer .seeing image {
+  width: 25rpx;
+  height: 21rpx;
+  margin-right: 10rpx;
 }

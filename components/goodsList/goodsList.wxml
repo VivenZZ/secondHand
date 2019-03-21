@@ -1,6 +1,40 @@
 <!-- components/goodsList/goodsList.wxml -->
-<view class="goodsList-item" wx:for="{{listData}}" wx:key="index">
-  <image class="goodsList-goodsImage"
+<view class="goodsList-item" wx:for="{{listData}}" wx:key="{{index}}">
+  <view class="header" hover-class="none" hover-stop-propagation="false">
+    <view class="personal_info" hover-class="none" hover-stop-propagation="false">
+      <image class="personal_pic" src="{{item.picture}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+      <view class="personal_pic_r" hover-class="none" hover-stop-propagation="false">
+        <view class="name" selectable="false" space="false" decode="false">
+          {{item.name}}
+        </view>
+        <view class="time" selectable="false" space="false" decode="false">
+          {{item.time}}前发布
+        </view>
+      </view>
+    </view>
+    <view class="price" hover-class="none" hover-stop-propagation="false">
+      ￥ <text class="" selectable="false" space="false" decode="false">{{item.price}}</text>
+    </view>
+  </view>
+  <view class="pic_box" hover-class="none" hover-stop-propagation="false">
+    <image wx:if="{{index < 3}}" class="pic" wx:for="{{item.images}}" wx:key="{{index}}" src="{{item}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+    </image>
+  </view>
+  <text class="content-title" selectable="false" space="false" decode="false">{{item.title}}</text>
+  <text class="content-text" selectable="false" space="false" decode="false">{{item.string}}</text>
+  <view class="footer" hover-class="none" hover-stop-propagation="false">
+    <view class="address" hover-class="none" hover-stop-propagation="false">
+      <image class="" src="/static/images/icon/address.png" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+      <text class="" selectable="false" space="false" decode="false">来自{{item.address}}</text>
+    </view>
+    <view class="seeing" hover-class="none" hover-stop-propagation="false">
+      <image class="" src="/static/images/icon/seeing.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+      <text class="" selectable="false" space="false" decode="false">{{item.number}}</text>
+    </view>
+  </view>
+</view>
+
+  <!-- <image class="goodsList-goodsImage"
     src="{{item.image}}"
     mode="scaleToFill"
     lazy-load="false">
@@ -19,5 +53,4 @@
         <view>{{item.name}}</view>
       </view>
     </view>
-  </view>
-</view>
+  </view> -->

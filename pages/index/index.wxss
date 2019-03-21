@@ -2,34 +2,13 @@
 * 常见边距大小
 */
 /*
-* 文字主标题
-* @title-size 大小 
-* @title-weight 粗细
-* @title-color 颜色
+* 常见字体颜色
 */
 /*
-* 文字主小标题
-* @title-size 大小 
-* @title-weight 粗细
-* @title-color 颜色
+* 常见字体大小
 */
 /*
-* 文字副标题
-* @title-size 大小 
-* @title-color 颜色
-*/
-/*
-* 时间标签
-* @title-size 大小 
-* @title-color 颜色
-*/
-/*
-* 最小文字
-* @title-size 大小 
-* @title-color 颜色
-*/
-/*
-* 边框颜色
+* 常见字体粗细
 */
 /*
 * icon大小
@@ -46,10 +25,13 @@
   width: 100%;
   display: block;
 }
-.goodsList-box {
-  width: 100%;
+.container_box {
+  box-sizing: border-box;
 }
 .iconListContainer {
   padding: 0 40rpx;
   margin: 40rpx 0 60rpx;
+}
+.tab-box {
+  padding: 0 40rpx 40rpx;
 }

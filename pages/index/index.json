@@ -1,9 +1,11 @@
 {
-  "navigationBarTitleText": "",
-  "navigationBarBackgroundColor": "#F5F8FA",
   "usingComponents": {
     "goods-list": "../../components/goodsList/goodsList",
     "search-input": "../../components/searchInput/searchInput",
-    "icon-list": "../../components/iconList/iconList"
-  }
+    "icon-list": "../../components/iconList/iconList",
+    "tab": "../../components/tab/tab"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#F5F8FA",
+  "onReachBottomDistance": 100
 }

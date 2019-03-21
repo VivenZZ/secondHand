@@ -4,6 +4,10 @@
   <view class="iconListContainer" hover-class="none" hover-stop-propagation="false">
     <icon-list iconListData="{{iconListData}}"></icon-list>
   </view>
+  <dialog dialogData="{{dialogData}}"/>
+  <view class='tab-box'>
+    <tab tabData="{{tabData}}"  bind:showTab="showTab"/>
+  </view>
   <view class="container_box" hover-class="none" hover-stop-propagation="false">
     <goods-list class="goodsList-box" listData="{{listData}}"></goods-list>
   </view>
