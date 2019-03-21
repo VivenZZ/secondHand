@@ -1,28 +1,70 @@
-.mine {
+/*
+* 常见边距大小
+*/
+/*
+* 常见字体颜色
+*/
+/*
+* 常见字体大小
+*/
+/*
+* 常见字体粗细
+*/
+/*
+* icon大小
+*/
+.icon {
+  width: 15px;
+  height: 15px;
+}
+.right-icon {
+  width: 7px;
+  height: 12px;
+}
+.personal {
+  padding: 40rpx;
+  background-color: white;
+}
+.personal .personal-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.personal .personal-info .personal-info-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 120rpx;
+  margin-right: 20rpx;
+}
+.personal .personal-info .personal-info-text {
+  display: flex;
   flex-direction: column;
+  font-size: 15px;
+  color: #666;
 }
-.mine .mine-log {
-  width: 100rpx;
-  height: 100rpx;
+.personal .personal-info .personal-info-text .name {
+  font-size: 23px;
+  color: #444;
 }
-.personal-data {
+.personal .personal-data {
   display: flex;
   text-align: center;
-  border-top: 1rpx solid silver;
-  border-bottom: 1rpx solid silver;
 }
-.personal-data .personal-data-item {
+.personal .personal-data .personal-data-item {
   flex: 1;
-  font-size: 28rpx;
-  line-height: 56rpx;
+  font-size: 13px;
+  color: #999;
+  margin-top: 80rpx;
 }
-.mine-list {
-  display: flex;
-  border-bottom: 1rpx solid silver;
-  font-size: 28rpx;
-  line-height: 56rpx;
-  padding: 28rpx;
+.personal .personal-data .numbers {
+  font-size: 23px;
+  color: #333;
 }
-.mine-list .mine-list-title {
-  flex: 1;
+.personal .personal-data .numbers .company {
+  font-size: 13px;
+}
+.picker-content {
+  background-color: white;
+  margin-top: 20rpx;
 }

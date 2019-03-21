@@ -1,29 +1,57 @@
 @import "../../static/css/style.less";
-.mine {
-  flex-direction: column;
-  .mine-log{
-    width: 100rpx;
-    height: 100rpx;
-  } 
-}
-.personal-data{
-  display: flex;
-  text-align: center;
-  border-top: 1rpx solid silver;
-  border-bottom: 1rpx solid silver;
-  .personal-data-item{
-    flex: 1;
-    font-size: 28rpx;
-    line-height: 56rpx;
+
+.personal {
+  padding: @40;
+  background-color: white;
+
+  .personal-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: @100;
+
+    .personal-info-img {
+      width: 120rpx;
+      height: 120rpx;
+      border-radius: 120rpx;
+      margin-right: @20;
+    }
+
+    .personal-info-text {
+      display: flex;
+      flex-direction: column;
+      font-size: @title-size-15;
+      color: @title-color-666;
+
+      .name {
+        font-size: 23px;
+        color: @title-color-444;
+      }
+    }
+  }
+
+  .personal-data {
+    display: flex;
+    text-align: center;
+
+    .personal-data-item {
+      flex: 1;
+      font-size: @title-size-13;
+      color: @title-color-999;
+      margin-top: @80;
+    }
+
+    .numbers {
+      font-size: 23px;
+      color: @title-color-333;
+
+      .company {
+        font-size: @title-size-13;
+      }
+    }
   }
 }
-.mine-list{
-  display: flex;
-  border-bottom: 1rpx solid silver;
-  font-size: 28rpx;
-  line-height: 56rpx;
-  padding: 28rpx;
-  .mine-list-title{
-    flex: 1;
-  }
+.picker-content{
+  background-color: white;
+  margin-top: @20;
 }

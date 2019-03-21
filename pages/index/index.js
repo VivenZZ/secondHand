@@ -5,10 +5,6 @@ let app = getApp()
 const req = require('../../utils/request.js')
 Page({
   data: {
-    dialogData: {
-      msg: 'shabi?',
-      title: ''
-    },
     tabData: [
       {
         id: 0,
@@ -97,13 +93,6 @@ Page({
     })
   },
   onLoad: function () {
-    req.get('goodsList', {}).then(res => {
-      this.setData({
-        listData: res.data.data
-      })
-    }).catch(e => {
-      this.showDialog(e.msg)
-    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -130,6 +119,15 @@ Page({
         }
       })
     }
+  },
+  onShow: function () {
+    req.get('goodsList', {}).then(res => {
+      this.setData({
+        listData: res.data.data
+      })
+    }).catch(e => {
+      this.showDialog(e.msg)
+    })
   },
   getUserInfo: function (e) {
     console.log(e)

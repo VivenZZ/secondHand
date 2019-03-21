@@ -8,5 +8,9 @@
     <text class="inputbox-text" selectable="false" space="false" decode="false">{{pickerListData.text}}</text>
     <input class="inputbox-input" type="text" placeholder="请输入{{pickerListData.text}}"></input>
   </view>
+  <view wx:elif="{{pickerListData.type === 'url'}}" class="inputbox" hover-class="none" hover-stop-propagation="false">
+    <text class="inputbox-text" selectable="false" space="false" decode="false">{{pickerListData.text}}</text>
+    <view  class="inputbox-input" hover-class="none" hover-stop-propagation="false"></view>
+  </view>
   <image wx:if="{{pickerListData.type !== 'input'}}" class="right-icon" src="{{pickerListData.righticon}}" />
 </view>

@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/personal/personal",
     "pages/index/index",
     "pages/release/release",
-    "pages/personal/personal",
     "pages/message/message",
     "pages/search/search",
     "components/iconList/iconList"
